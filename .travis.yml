@@ -1,0 +1,5 @@
+language: swift
+osx_image: xcode12.5
+xode_project: Triangle/Triangle.xcodeproj
+xcode_scheme: Triangle
+xcode_destination: platform=iOS Simaulator, OS=14.0,name=iPhone 11 Pro
