@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build
       run: |
-           xcodebuild clean build -workspace "Triangle.xcworkspace" -scheme "Triangle" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+           xcodebuild clean build -workspace "Triangle.xcodeproj" -scheme "Triangle" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
     - name: Run tests
       run: |
-           xcodebuild clean test -workspace "Triangle.xcworkspace" -scheme "TriangleTest" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+           xcodebuild clean test -workspace "Triangle.xcodeproj" -scheme "TriangleTest" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
