@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build
       run: |
-           xcodebuild clean build -target "Triangle.xcodeproj" -scheme "Triangle" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+           xcodebuild clean build -target "Triangle.xcodeproj" -scheme "Triangle" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
     - name: Run tests
       run: |
-           xcodebuild clean test  -target "Triangle.xcodeproj" -scheme "Triangle" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+           xcodebuild clean test  -target "Triangle.xcodeproj" -scheme "Triangle" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" --enable-code-coverage CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
